@@ -1,0 +1,52 @@
+npm install three
+	added 1 package, and audited 183 packages in 3s
+
+	43 packages are looking for funding
+	  run `npm fund` for details
+
+	found 0 vulnerabilities
+	
+> commited files to remote repo
+
+> how to add typescript code, which uses three.js in Vite project
+- need to remove React code 
+the clicker code is in App.tsx
+the code starts running in main.tsx
+probably because of that 
+<script type="module" src="/src/main.tsx"></script>
+
+
+
+add main.ts
+change index.html to use "/src/main.ts"
+
+needed to do 
+npm i --save-dev @types/three 
+to get the import * as THREE from 'three';
+to work 
+
+
+
+js file that worked: 
+// import './style.css'
+// import * as THREE from 'three';
+
+// // Initialize Three.js
+// const scene = new THREE.Scene();
+// const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+// camera.position.set(2, 2, 4);
+// camera.lookAt(0, 0, 0);
+// const renderer = new THREE.WebGLRenderer();
+
+// renderer.setSize(window.innerWidth, window.innerHeight);
+// document.body.appendChild(renderer.domElement);
+
+// // Render the scene
+// renderer.render(scene, camera);
+
+> got the same stuff working with typescript
+> pushed changes to github using vs code interface
+> try to delete a file
+worked!
+> try to build it... 
+vite build doesnt't work
